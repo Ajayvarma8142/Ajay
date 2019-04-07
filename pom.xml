@@ -36,7 +36,7 @@
  <configuration>  
   <url>http://localhost:8000/manager/text</url>  
   <server>TomcatServer</server>   
-  <username>Ajayvarma</username>  
+  <username>admin</username>  
   <password>admin</password>   
  </configuration>   
 </plugin> 
