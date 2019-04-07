@@ -32,7 +32,13 @@ pipeline {
     stage('dev-deploy') {
       steps {
         script {
-          mvn tomcat8:deploy
+
+          withEnv(['JENKINS_NODE_COOKIE=dontKill']){
+
+            bat 'start runapp.bat'
+
+
+          }
         }
 
       }
