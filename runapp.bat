@@ -1,1 +1,1 @@
-mvn tomcat8:run
+mvn tomcat8:deploy
