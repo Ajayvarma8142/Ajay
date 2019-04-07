@@ -32,7 +32,6 @@ pipeline {
     stage('dev-deploy') {
       steps {
         script {
-
           withEnv(['JENKINS_NODE_COOKIE=dontKill']){
 
             bat 'start runapp.bat'
