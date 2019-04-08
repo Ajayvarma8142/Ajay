@@ -30,15 +30,15 @@
           </plugin>
         <!-- Tomcat plugin -->  
 <plugin>  
- <groupId>org.apache.tomcat.maven</groupId>  
- <artifactId>tomcat8-maven-plugin</artifactId>  
- <version>2.2</version>  
- <configuration>  
-  <url>http://localhost:8000/manager/text</url>  
-  <server>TomcatServer</server>   
-  <username>admin</username>  
-  <password>admin</password>   
- </configuration>   
+       <groupId>org.apache.tomcat.maven</groupId>  
+       <artifactId>tomcat8-maven-plugin</artifactId>  
+       <version>2.2</version>  
+  <configuration>  
+       <url>http://localhost:8000</url>  
+       <server>TomcatServer</server>   
+       <username>Ajayvarma</username>  
+       <password>admin</password>   
+  </configuration>   
 </plugin> 
       </plugins>
   </build>
