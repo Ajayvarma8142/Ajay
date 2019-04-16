@@ -6,5 +6,10 @@ pipeline {
         git 'https://github.com/Ajayvarma8142/Ajay.git'
       }
     }
+    stage('build') {
+      steps {
+        bat 'mvn install'
+      }
+    }
   }
 }
