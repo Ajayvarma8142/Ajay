@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('build') {
-      steps {
-        bat(script: 'mvn clean install', returnStatus: true)
+      parallel {
+        stage('build') {
+          steps {
+            bat(script: 'mvn clean install', returnStatus: true)
+          }
+        }
+        stage('SonarQube') {
+          steps {
+            bat 'mvn sonar:sonar'
+          }
+        }
       }
     }
   }
