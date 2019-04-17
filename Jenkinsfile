@@ -15,7 +15,7 @@ pipeline {
         }
         stage('SonarQube') {
           steps {
-            bat 'mvn sonar:sonar \\   -Dsonar.projectKey=ajay \\   -Dsonar.host.url=http://localhost:9000 \\   -Dsonar.login=d474b4b2d6527baf778bc4ce5a28d469590118e2'
+            bat 'mvn sonar:sonar \\     -Dsonar.host.url=http://localhost:9000 \\   -Dsonar.login=d474b4b2d6527baf778bc4ce5a28d469590118e2'
           }
         }
       }
