@@ -22,7 +22,7 @@ pipeline {
     }
     stage('Artifactory') {
       steps {
-        bat 'run web.xml'
+        bat ' web.xml'
       }
     }
   }
