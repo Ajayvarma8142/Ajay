@@ -6,14 +6,23 @@ pipeline {
         git(url: 'https://github.com/Ajayvarma8142/Ajay.git', branch: 'master')
       }
     }
-    stage('build') {
-      steps {
-        bat 'rem testbuild'
+    stage('compile') {
+      parallel {
+        stage('compile') {
+          steps {
+            bat 'mvn compile'
+          }
+        }
+        stage('Juni-test') {
+          steps {
+            bat 'mvn test'
+          }
+        }
       }
     }
-    stage('test') {
+    stage('build') {
       steps {
-        bat 'mvn test'
+        bat 'mvn package'
       }
     }
     stage('deploy') {
