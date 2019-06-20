@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        bat '#testbuild'
+        bat 'rem testbuild'
       }
     }
     stage('test') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        bat '#!test'
+        bat 'rem test'
       }
     }
   }
